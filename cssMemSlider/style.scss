@@ -34,9 +34,85 @@
         width: calc(100% * 4);
         height: 100%;
         display: flex;
+        transition: all .5s ease-in-out;
     }
     .sliderInner img {
         width: 25%;
         height: auto;
     }
+.buttonWrapper{
+        width: 100%;
+        max-height: 5rem;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .wrapperPanel {
+        width: 100%;
+        max-width: 50rem;
+        height: auto;
+        display: flex;
+        align-items: center;
+        margin-right: 2rem;
+        margin-left: 2rem;
+        justify-content: space-between;
+    }
+    .description{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: aliceblue;
+    }
+    .descriptionDisplay{
+        width: 100%;
+        max-width: 25rem;
+        height: 100%;
+        overflow: hidden;
+    }
+    .descriptionInner {
+        width: calc(100% * 4);
+        height: 100%;
+        transition: all .5s ease-in-out;
+        display: flex;
+    }
+    .text{
+        width: 25%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 2rem;
+        color: rgb(241, 205, 222);
+    }
+
+    .buttom {
+        max-width: 25rem;
+        width: auto;
+        height: auto;
+        display: flex;
+        gap: 1rem;
+    }
+    .buttom label {
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .buttom label span {
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+        border-radius: 100%;
+        border: 0%;
+        background: #762869;
+        transition: all .5s ease-in-out;
+    }
+     label:hover span{
+        background: rgb(241, 205, 222);
+    } 
            
