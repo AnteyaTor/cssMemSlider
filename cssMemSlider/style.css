@@ -252,4 +252,24 @@ label:active > span {
   border: solid 0.2rem #f1cdde;
   border-radius: 1.2rem;
 }
+
+@media (max-width: 768px) {
+  .wrapper {
+    gap: 1rem;
+  }
+  .wrapperPanel {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 1.2rem;
+  }
+  .buttonWrapper {
+    max-height: 7rem;
+    height: 100%;
+  }
+}
 /*# sourceMappingURL=style.css.map */

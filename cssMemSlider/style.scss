@@ -167,3 +167,16 @@
         border: solid 0.2rem rgb(241, 205, 222);
         border-radius: 1.2rem;
     }
+
+    @media(max-width: 768px) {
+        .wrapper{
+            gap: 1rem;
+        }
+         .wrapperPanel {
+            flex-direction: column-reverse;
+            justify-content: center;
+            gap: 1.rem;
+        }
+        .buttonWrapper {max-height: 7rem;
+            height: 100%;}
+    }
