@@ -54,7 +54,7 @@ body {
 }
 
 .sliderInner {
-  width: calc(100% * 4);
+  width: calc(400%);
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -123,7 +123,7 @@ body {
 }
 
 .descriptionInner {
-  width: calc(100% * 4);
+  width: calc(400%);
   height: 100%;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
@@ -186,5 +186,70 @@ body {
 
 label:hover span {
   background: #f1cdde;
+}
+
+label:active > span {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+#one:checked ~ .wrapperOfslider .sliderDisplay .sliderInner {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+#one:checked ~ .buttonWrapper .wrapperPanel .description .descriptionDisplay .descriptionInner {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+#two:checked ~ .wrapperOfslider .sliderDisplay .sliderInner {
+  -webkit-transform: translateX(-25%);
+          transform: translateX(-25%);
+}
+
+#two:checked ~ .buttonWrapper .wrapperPanel .description .descriptionDisplay .descriptionInner {
+  -webkit-transform: translateX(-25%);
+          transform: translateX(-25%);
+}
+
+#three:checked ~ .wrapperOfslider .sliderDisplay .sliderInner {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#three:checked ~ .buttonWrapper .wrapperPanel .description .descriptionDisplay .descriptionInner {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#four:checked ~ .wrapperOfslider .sliderDisplay .sliderInner {
+  -webkit-transform: translateX(-75%);
+          transform: translateX(-75%);
+}
+
+#four:checked ~ .buttonWrapper .wrapperPanel .description .descriptionDisplay .descriptionInner {
+  -webkit-transform: translateX(-75%);
+          transform: translateX(-75%);
+}
+
+#one:checked ~ .buttonWrapper .wrapperPanel .buttom label[for=one] span,
+#two:checked ~ .buttonWrapper .wrapperPanel .buttom label[for=two] span,
+#three:checked ~ .buttonWrapper .wrapperPanel .buttom label[for=three] span,
+#four:checked ~ .buttonWrapper .wrapperPanel .buttom label[for=four] span {
+  background-color: transparent;
+  border: solid 0.2rem #762869;
+  border-radius: 1.2rem;
+}
+
+#one:checked:hover ~ .buttonWrapper .wrapperPanel .buttom label[for=one] span,
+#two:checked:hover ~ .buttonWrapper .wrapperPanel .buttom label[for=two] span,
+#three:checked:hover ~ .buttonWrapper .wrapperPanel .buttom label[for=three] span,
+#four:checked:hover ~ .buttonWrapper .wrapperPanel .buttom label[for=four] span {
+  background-color: transparent;
+  border: solid 0.2rem #f1cdde;
+  border-radius: 1.2rem;
 }
 /*# sourceMappingURL=style.css.map */
