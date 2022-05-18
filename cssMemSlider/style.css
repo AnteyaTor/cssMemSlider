@@ -1,275 +1,182 @@
-body {
-  margin: 0%;
-}
+body {margin: 0%;}
+.wrapper {width: 100%;
+    min-height: 40rem;
+    height: 95vh;
+    background: #120011;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;}
+    .wrapper input {
+        width: 0;
+        height: 0;
+    }
+    .wrapperOfslider {
+        width: 100%;
+        max-height: 25rem;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+    .sliderDisplay {
+        width: 100%;
+        max-width: 50rem;
+        height: 100%;
+        max-height: 25rem;
+        border-radius: 25px;
+        margin-right: 2rem;
+        margin-left: 2rem;
+        overflow: hidden;
+    
+    }
+    .sliderInner {
+        width: calc(400%);
+        height: 100%;
+        display: flex;
+        transition: all .5s ease-in-out;
+    }
+    .sliderInner img {
+        width: 25%;
+        height: auto;
+    }
+.buttonWrapper{
+        width: 100%;
+        max-height: 5rem;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .wrapperPanel {
+        width: 100%;
+        max-width: 50rem;
+        height: auto;
+        display: flex;
+        align-items: center;
+        margin-right: 2rem;
+        margin-left: 2rem;
+        justify-content: space-between;
+    }
+    .description{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: aliceblue;
+    }
+    .descriptionDisplay{
+        width: 100%;
+        max-width: 25rem;
+        height: 100%;
+        overflow: hidden;
+    }
+    .descriptionInner {
+        width: calc(400%);
+        height: 100%;
+        transition: all .5s ease-in-out;
+        display: flex;
+    }
+    .text{
+        width: 25%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 2rem;
+        color: rgb(241, 205, 222);
+    }
 
-.wrapper {
-  width: 100%;
-  min-height: 40rem;
-  height: 95vh;
-  background: #120011;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
+    .buttom {
+        max-width: 25rem;
+        width: auto;
+        height: auto;
+        display: flex;
+        gap: 1rem;
+    }
+    .buttom label {
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .buttom label span {
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+        border-radius: 100%;
+        border: 0%;
+        background: #762869;
+        transition: all .5s ease-in-out;
+    }
+     label:hover span{
+        background: rgb(241, 205, 222);
+    } 
+    label:active > span {
+        transform: scale(0.8);
+        transition: all 0.1s ease-in-out;
+    }
+   
 
-.wrapper input {
-  width: 0;
-  height: 0;
-}
 
-.wrapperOfslider {
-  width: 100%;
-  max-height: 25rem;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
 
-.sliderDisplay {
-  width: 100%;
-  max-width: 50rem;
-  height: 100%;
-  max-height: 25rem;
-  border-radius: 25px;
-  margin-right: 2rem;
-  margin-left: 2rem;
-  overflow: hidden;
-}
+    #one:checked ~ .wrapperOfslider .sliderDisplay .sliderInner {
+        transform: translateX(0%);
+    }
+    #one:checked ~ .buttonWrapper .wrapperPanel .description .descriptionDisplay .descriptionInner {
+        transform: translateX(0%);
+    }
+    #two:checked ~ .wrapperOfslider .sliderDisplay .sliderInner{
+        transform: translateX(-25%);
+    }
+    #two:checked ~ .buttonWrapper .wrapperPanel .description .descriptionDisplay .descriptionInner {
+        transform: translateX(-25%);
+    }
+    #three:checked ~ .wrapperOfslider .sliderDisplay .sliderInner{
+        transform: translateX(-50%);
+    }
+    #three:checked ~ .buttonWrapper .wrapperPanel .description .descriptionDisplay .descriptionInner {
+        transform: translateX(-50%);
+    }
+    #four:checked ~ .wrapperOfslider .sliderDisplay .sliderInner{
+        transform: translateX(-75%);
+    }
+    #four:checked ~ .buttonWrapper .wrapperPanel .description .descriptionDisplay .descriptionInner {
+        transform: translateX(-75%);
+    }
 
-.sliderInner {
-  width: calc(400%);
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-}
+   
+    #one:checked ~ .buttonWrapper .wrapperPanel .buttom label[for=one] span,
+    #two:checked ~ .buttonWrapper .wrapperPanel .buttom label[for=two] span,
+    #three:checked ~ .buttonWrapper .wrapperPanel .buttom label[for=three] span,
+    #four:checked ~ .buttonWrapper .wrapperPanel .buttom label[for=four] span,
+     {
+        background-color: transparent;
+        border: solid 0.2rem #762869;
+        border-radius: 1.2rem;
+    }
+    #one:checked:hover ~ .buttonWrapper .wrapperPanel .buttom label[for=one] span,
+    #two:checked:hover ~ .buttonWrapper .wrapperPanel .buttom label[for=two] span,
+    #three:checked:hover ~ .buttonWrapper .wrapperPanel .buttom label[for=three] span,
+    #four:checked:hover ~ .buttonWrapper .wrapperPanel .buttom label[for=four] span,
+     {
+        background-color: transparent;
+        border: solid 0.2rem rgb(241, 205, 222);
+        border-radius: 1.2rem;
+    }
 
-.sliderInner img {
-  width: 25%;
-  height: auto;
-}
-
-.buttonWrapper {
-  width: 100%;
-  max-height: 5rem;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.wrapperPanel {
-  width: 100%;
-  max-width: 50rem;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 2rem;
-  margin-left: 2rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.description {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: aliceblue;
-}
-
-.descriptionDisplay {
-  width: 100%;
-  max-width: 25rem;
-  height: 100%;
-  overflow: hidden;
-}
-
-.descriptionInner {
-  width: calc(400%);
-  height: 100%;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.text {
-  width: 25%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 2rem;
-  color: #f1cdde;
-}
-
-.buttom {
-  max-width: 25rem;
-  width: auto;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 1rem;
-}
-
-.buttom label {
-  width: 4rem;
-  height: 4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
-}
-
-.buttom label span {
-  width: 2rem;
-  height: 2rem;
-  cursor: pointer;
-  border-radius: 100%;
-  border: 0%;
-  background: #762869;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-}
-
-label:hover span {
-  background: #f1cdde;
-}
-
-label:active > span {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-}
-
-#one:checked ~ .wrapperOfslider .sliderDisplay .sliderInner {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-}
-
-#one:checked ~ .buttonWrapper .wrapperPanel .description .descriptionDisplay .descriptionInner {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-}
-
-#two:checked ~ .wrapperOfslider .sliderDisplay .sliderInner {
-  -webkit-transform: translateX(-25%);
-          transform: translateX(-25%);
-}
-
-#two:checked ~ .buttonWrapper .wrapperPanel .description .descriptionDisplay .descriptionInner {
-  -webkit-transform: translateX(-25%);
-          transform: translateX(-25%);
-}
-
-#three:checked ~ .wrapperOfslider .sliderDisplay .sliderInner {
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-#three:checked ~ .buttonWrapper .wrapperPanel .description .descriptionDisplay .descriptionInner {
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-#four:checked ~ .wrapperOfslider .sliderDisplay .sliderInner {
-  -webkit-transform: translateX(-75%);
-          transform: translateX(-75%);
-}
-
-#four:checked ~ .buttonWrapper .wrapperPanel .description .descriptionDisplay .descriptionInner {
-  -webkit-transform: translateX(-75%);
-          transform: translateX(-75%);
-}
-
-#one:checked ~ .buttonWrapper .wrapperPanel .buttom label[for=one] span,
-#two:checked ~ .buttonWrapper .wrapperPanel .buttom label[for=two] span,
-#three:checked ~ .buttonWrapper .wrapperPanel .buttom label[for=three] span,
-#four:checked ~ .buttonWrapper .wrapperPanel .buttom label[for=four] span {
-  background-color: transparent;
-  border: solid 0.2rem #762869;
-  border-radius: 1.2rem;
-}
-
-#one:checked:hover ~ .buttonWrapper .wrapperPanel .buttom label[for=one] span,
-#two:checked:hover ~ .buttonWrapper .wrapperPanel .buttom label[for=two] span,
-#three:checked:hover ~ .buttonWrapper .wrapperPanel .buttom label[for=three] span,
-#four:checked:hover ~ .buttonWrapper .wrapperPanel .buttom label[for=four] span {
-  background-color: transparent;
-  border: solid 0.2rem #f1cdde;
-  border-radius: 1.2rem;
-}
-
-@media (max-width: 768px) {
-  .wrapper {
-    gap: 1rem;
-  }
-  .wrapperPanel {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
+    @media(max-width: 768px) {
+        .wrapper{
+            gap: 1rem;
+        }
+         .wrapperPanel {
             flex-direction: column-reverse;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
             justify-content: center;
-    gap: 1.2rem;
-  }
-  .buttonWrapper {
-    max-height: 7rem;
-    height: 100%;
-  }
-}
-/*# sourceMappingURL=style.css.map */
+            gap: 1.rem;
+        }
+        .buttonWrapper {max-height: 7rem;
+            height: 100%;}
+    }
